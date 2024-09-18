@@ -1,1 +1,9 @@
-requests
+beautifulsoup4==4.12.2
+langdetect==1.0.9
+nltk==3.8.1
+pandas==2.0.3
+requests==2.31.0
+tqdm==4.65.0
+yake==0.4.8
+lxml[html_clean]==4.9.3
+requests-html==0.10.0
