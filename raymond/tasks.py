@@ -7,7 +7,7 @@ import nltk
 from tqdm import tqdm
 import logging
 import time
-from .keyword_extractor import extract_keywords
+from keyword_extractor import extract_keywords
 from requests_html import HTMLSession
 
 

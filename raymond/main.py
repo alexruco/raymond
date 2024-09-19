@@ -1,11 +1,11 @@
 # main.py
 
 import logging
-from .tasks import extract_keywords_from_urls
-from .utils import valid_url
+from tasks import extract_keywords_from_urls
+from utils import valid_url
 
 def get_keywords(url, top_n=10):
-    """
+    """ 
     Extracts keywords from a single URL and returns them as a list.
     """
     # Validate the URL
