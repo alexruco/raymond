@@ -126,48 +126,6 @@ def get_people_also_ask_questions(central_keyword: str, url: str, top_n: int = 1
     return all_questions
 
 
-def get_keywords_from_file(file_path, top_n=10, output_csv='output.csv'):
-    """
-    Reads URLs from a text file, extracts keywords from each, and saves the results to a CSV.
-    Returns the DataFrame containing the results.
-    """
-    # Read URLs from file
-    try:
-        with open(file_path, 'r') as f:
-            urls = [line.strip() for line in f if line.strip()]
-    except Exception as e:
-        logging.error(f"Failed to read URLs from file {file_path}: {e}")
-        raise
-
-    if not urls:
-        logging.error("No URLs found in the file.")
-        raise ValueError("No URLs found in the file.")
-
-    # Validate URLs
-    valid_urls = []
-    for url in urls:
-        try:
-            valid_url(url)
-            valid_urls.append(url)
-        except ValueError as e:
-            logging.warning(f"{e}")
-
-    if not valid_urls:
-        logging.error("No valid URLs to process after validation.")
-        raise ValueError("No valid URLs to process after validation.")
-
-    # Extract keywords
-    result_df = extract_keywords_from_urls(
-        urls=valid_urls,
-        top_n=top_n
-    )
-
-    # Save the results to CSV
-    result_df.to_csv(output_csv, index=False)
-
-    return result_df
-
-
 # Example usage
 if __name__ == "__main__":
     # Configure logging to output to the console
