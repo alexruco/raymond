@@ -1,6 +1,7 @@
 # 📦 Raymond - Keyword Extractor
 
-**Raymond** is a fast, lightweight tool for extracting keywords from text. 
+**Raymond** is a fast, lightweight tool for extracting keywords from text.  
+Named in honor of **Raymond Williams**, the creator of the concept of *Keywords*.
 
 ## ⚙️ Features
 
@@ -19,8 +20,16 @@
     ```bash
     pip install -r requirements.txt
 
-2. Import and call the functions:
+2. Import and call the functions in your project:
     ```bash
     get_keywords(url)
     get_keywords_from_file(file_path)
     get_people_also_ask_questions(central_keyword, url)
+
+## 🤝 Contribution
+    Contributions are welcome! Feel free to open an issue or submit a pull request.
+    Please ensure all code is properly tested before submitting.
+
+## 📄 License
+    This project is licensed under the MIT License.
+    © 2024 Alex Ruco
