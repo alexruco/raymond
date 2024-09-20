@@ -1,0 +1,10 @@
+automation
+cloud
+data
+learn
+management
+mobile
+quality
+testing
+tests
+web
